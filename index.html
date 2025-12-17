@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px '.AppleSystemUIFontMonospaced'; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px '.AppleSystemUIFontMonospaced'; -webkit-text-stroke: #000000; min-height: 15.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!doctype html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Prestige Auto — Mockup&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>:root{--accent:#c62828;--dark:#111;--muted:#666}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;color:var(--dark);background:#fff}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #eee;flex-wrap:wrap}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav a{margin:6px 10px;color:var(--dark);text-decoration:none;font-weight:600}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero{background:url('https://via.placeholder.com/1600x700?text=Prestige+Auto+Hero') center/cover no-repeat;padding:64px 16px;color:#fff}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.headline{font-size:clamp(22px,5vw,34px);line-height:1.1;margin-bottom:10px;font-weight:700}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.sub{font-size:clamp(15px,4vw,18px);margin-bottom:16px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn{background:var(--accent);color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:700}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>main{max-width:1100px;margin:20px auto;padding:0 14px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,0.04)}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.carousel{position:relative}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.carousel img{width:100%;height:200px;object-fit:cover;cursor:pointer}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;font-size:26px;width:36px;height:36px;border-radius:50%}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.prev{left:8px}.next{right:8px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.thumbs{display:flex;gap:6px;padding:6px;overflow-x:auto}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.thumbs img{width:54px;height:42px;object-fit:cover;border-radius:6px;cursor:pointer;opacity:.7}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.thumbs img:hover{opacity:1}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.body{padding:12px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.meta{font-size:14px;color:var(--muted)}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.whatsapp{display:block;margin-top:10px;padding:10px;border-radius:8px;background:#25D366;color:#fff;text-align:center;text-decoration:none;font-weight:700}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Lightbox */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:2000}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.lightbox img{max-width:92%;max-height:92%}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.lightbox.active{display:flex}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.lightbox-close{position:absolute;top:20px;right:20px;font-size:28px;color:#fff;cursor:pointer}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media(max-width:720px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>header{gap:10px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.carousel img{height:180px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="logo"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- AI logo (replace with your preferred file) --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;svg viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prestige Auto logo"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;path d="M6 36 C60 4 120 4 180 36" fill="none" stroke="#111" stroke-width="4"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;path d="M16 30 C70 8 130 8 190 30" fill="none" stroke="#c62828" stroke-width="3"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;text x="6" y="56" font-family="Arial" font-size="18" font-weight="700"&gt;PRESTIGE AUTO&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;nav&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#inventory"&gt;Inventory&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#about"&gt;About&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section class="hero"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="headline"&gt;Prestige Auto — Your Trusted Used Car Dealer in Beit Shemesh &amp;amp; Jerusalem&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="sub"&gt;We buy, sell, and repair all makes and models. Same day, professional service you can count on!&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="cta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#inventory" class="btn"&gt;View Inventory&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a id="hero-wa" href="#" class="btn ghost"&gt;Contact via WhatsApp&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;main&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="inventory"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Our Inventory&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="grid" id="inventory-grid"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Cards populated by JS --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="about"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;About Us&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="about"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;strong&gt;Prestige Auto&lt;/strong&gt; has been proudly serving Beit Shemesh, Jerusalem, and surrounding areas for years. We specialize in buying, selling, and repairing all makes and models. Our same-day professional service ensures you get the car you want without hassle.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;We offer transparent pricing, full-service inspections, and an on-site repair garage. Visit our yard or contact us directly via WhatsApp.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;form id="lead-form"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input name="firstName" placeholder="First Name" required /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input name="lastName" placeholder="Last Name" required /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input name="phone" placeholder="Phone Number (include country code)" required /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="radio-group"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;label&gt;&lt;input type="radio" name="interest" value="Buying" checked /&gt; Buying&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;label&gt;&lt;input type="radio" name="interest" value="Selling" /&gt; Selling&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;input name="makeModelYear" placeholder="Make / Model / Year" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="submit"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;button type="submit" class="btn"&gt;Send to WhatsApp&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/form&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;img src="https://via.placeholder.com/520x360?text=Garage+Team+Photo" alt="Team working on a car" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="contact"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Contact&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Phone: &lt;strong&gt;+972-XX-XXX-XXXX&lt;/strong&gt; — replace with your business phone&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Service areas: Beit Shemesh, Jerusalem and surrounding areas.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Built-in mockup • Replace placeholder content &amp; images with your real assets.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- ADMIN DASHBOARD (Authentication + Admin UI + Image Uploader) --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section id="admin" style="max-width:1100px;margin:28px auto;padding:0 18px;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Admin&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="auth-area"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="auth-forms"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div id="login-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Admin login&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input id="admin-email" placeholder="Admin email" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input id="admin-pass" type="password" placeholder="Password" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div style="margin-top:8px"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button id="btn-login" class="btn"&gt;Sign in&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button id="btn-logout" class="btn ghost" style="display:none"&gt;Sign out&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p style="color:var(--muted);font-size:13px;margin-top:8px"&gt;(Admin account must be created in your Firebase Console or via CLI)&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="admin-panel" style="display:none;margin-top:18px"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Inventory Admin Dashboard&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p style="color:var(--muted)"&gt;Add new cars, upload images (to Firebase Storage), edit or delete listings.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div style="background:#fafafa;border:1px solid #eee;padding:12px;border-radius:8px;margin-top:12px"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Add New Car&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input id="car-title" placeholder="Title (e.g. 2019 Toyota Corolla)" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input id="car-price" placeholder="Price (₪)" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input id="car-make" placeholder="Make" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input id="car-model" placeholder="Model" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input id="car-year" placeholder="Year" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input id="car-image" type="file" accept="image/*" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div style="text-align:right;margin-top:8px"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button id="btn-add-car" class="btn"&gt;Upload &amp; Add&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div style="margin-top:18px"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Existing Listings&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="admin-list" class="grid"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>Built-in mockup • Replace placeholder content &amp; images with your real assets.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1">// ========== Firebase Auth, Firestore &amp; Storage Admin ==========</span></p>
+<p class="p1"><span class="s1">// NOTE: replace the firebaseConfig below with your project's credentials.</span></p>
+<p class="p1"><span class="s1">(async function(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// dynamic import of firebase SDK (modular)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const mod = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const fire = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const fs = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const storageMod = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const { initializeApp } = mod;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } = fire;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, updateDoc } = fs;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const { getStorage, ref, uploadBytes, getDownloadURL } = storageMod;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const firebaseConfig = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>apiKey: "AIzaSyCMjLcfesuDhXbwDBjfncbZy4sumgqlZJo",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>authDomain: "prestigeauto-d5449.firebaseapp.com",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>projectId: "prestigeauto-d5449",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>storageBucket: "prestigeauto-d5449.firebasestorage.app",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>messagingSenderId: "778400353896",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>appId: "1:778400353896:web:d9599ac0ee5c60b320f5dd"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const app = initializeApp(firebaseConfig);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const auth = getAuth(app);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const db = getFirestore(app);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const storage = getStorage(app);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const carsRef = collection(db, 'cars');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// UI refs</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const loginBtn = document.getElementById('btn-login');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const logoutBtn = document.getElementById('btn-logout');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const adminPanel = document.getElementById('admin-panel');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const adminList = document.getElementById('admin-list');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const addCarBtn = document.getElementById('btn-add-car');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Only allow specific admin emails (simple check). Configure as needed.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const ALLOWED_ADMINS = ['admin@yourdomain.com']; // replace with your admin email(s)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>loginBtn.addEventListener('click', async ()=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const email = document.getElementById('admin-email').value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const pass = document.getElementById('admin-pass').value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>try{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>await signInWithEmailAndPassword(auth, email, pass);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}catch(err){alert('Login failed: '+err.message)}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>logoutBtn.addEventListener('click', async ()=&gt;{ await signOut(auth); });</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>onAuthStateChanged(auth, async user=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(user &amp;&amp; ALLOWED_ADMINS.includes(user.email)){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// show admin</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>adminPanel.style.display='block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>loginBtn.style.display='none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>logoutBtn.style.display='inline-block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>await refreshAdminList();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}else{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>adminPanel.style.display='none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>loginBtn.style.display='inline-block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>logoutBtn.style.display='none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>async function refreshAdminList(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>adminList.innerHTML = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const snap = await getDocs(carsRef);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>snap.forEach(docu=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const data = { id: docu.id, ...docu.data() };</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const card = document.createElement('div'); card.className='card';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>card.innerHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img src="${data.img||'https://via.placeholder.com/800x500?text=No+Image'}" alt="${data.title||''}" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class=\"body\"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;strong&gt;${data.title||''}&lt;/strong&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;${data.price||''}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div style=\"margin-top:8px;display:flex;gap:8px\"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button data-id=\"${data.id}\" class=\"btn edit\"&gt;Edit&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button data-id=\"${data.id}\" class=\"btn ghost del\"&gt;Delete&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>adminList.appendChild(card);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Delete handler</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>adminList.addEventListener('click', async (e)=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(e.target.classList.contains('del')){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const id = e.target.dataset.id; if(!confirm('Delete this listing?')) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>await deleteDoc(doc(db, 'cars', id));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>await refreshAdminList();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(e.target.classList.contains('edit')){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const id = e.target.dataset.id;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const newTitle = prompt('New title (leave blank to keep)');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(newTitle){ await updateDoc(doc(db,'cars',id), { title:newTitle }); await refreshAdminList(); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Add car with MULTI-image upload</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>addCarBtn.addEventListener('click', async ()=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const title = document.getElementById('car-title').value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const price = document.getElementById('car-price').value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const make = document.getElementById('car-make').value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const model = document.getElementById('car-model').value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const year = document.getElementById('car-year').value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const fileInput = document.getElementById('car-image');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(!title || !price){ return alert('Title and price required'); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let imageUrls = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(fileInput.files &amp;&amp; fileInput.files.length){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>for(const file of fileInput.files){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const path = `cars/${Date.now()}_${file.name}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const storageRef = ref(storage, path);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>await uploadBytes(storageRef, file);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const url = await getDownloadURL(storageRef);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>imageUrls.push(url);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>await addDoc(carsRef, {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>title,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>price,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>images: imageUrls,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>make,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>model,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>year,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>createdAt: Date.now()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>alert('Car added');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById('car-title').value='';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById('car-price').value='';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById('car-image').value='';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>await refreshAdminList();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(typeof loadInventory==='function') loadInventory();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>alert('Car added');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById('car-title').value=''; document.getElementById('car-price').value='';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById('car-image').value='';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>await refreshAdminList();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// refresh public inventory</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(typeof loadInventory==='function') loadInventory();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">})();</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="whatsapp-float" title="Chat on WhatsApp"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a id="float-wa" href="#" target="_blank" rel="noopener"&gt;🟢&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// ========== Sample inventory (replace with live API/DB) ==========</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const INVENTORY = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ id:1, title:'2019 Toyota Corolla', price:'₪45,000', img:'https://via.placeholder.com/800x500?text=2019+Toyota+Corolla', make:'Toyota', model:'Corolla', year:2019 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ id:2, title:'2020 Honda Civic', price:'₪55,000', img:'https://via.placeholder.com/800x500?text=2020+Honda+Civic', make:'Honda', model:'Civic', year:2020 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ id:3, title:'2018 BMW 320i', price:'₪80,000', img:'https://via.placeholder.com/800x500?text=2018+BMW+320i', make:'BMW', model:'320i', year:2018 }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function createCard(car){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const el = document.createElement('div'); el.className='card';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const images = car.images &amp;&amp; car.images.length ? car.images : (car.img ? [car.img] : ['https://via.placeholder.com/800x500?text=No+Image']);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const slides = images.map((src,i)=&gt;`&lt;img src="${src}" data-index="${i}" class="slide" style="display:${i===0?'block':'none'}" /&gt;`).join('');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const thumbs = images.map((src,i)=&gt;`&lt;img src="${src}" data-index="${i}" class="thumb" /&gt;`).join('');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>el.innerHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="carousel"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>${slides}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button class="nav prev"&gt;‹&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button class="nav next"&gt;›&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="thumbs"&gt;${thumbs}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="body"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="title"&gt;&lt;strong&gt;${car.title||''}&lt;/strong&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="price"&gt;${car.price||''}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;a class="whatsapp" href="#" data-carid="${car.id}"&gt;Contact via WhatsApp&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>`;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let current = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const slideEls = el.querySelectorAll('.slide');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const thumbEls = el.querySelectorAll('.thumb');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>function show(idx){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>current = idx;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>slideEls.forEach((s,i)=&gt;s.style.display = i===idx?'block':'none');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>el.querySelector('.prev').onclick = ()=&gt;show((current-1+slideEls.length)%slideEls.length);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>el.querySelector('.next').onclick = ()=&gt;show((current+1)%slideEls.length);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>thumbEls.forEach(t=&gt;t.onclick=()=&gt;show(Number(t.dataset.index)));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>slideEls.forEach(s=&gt;s.onclick=()=&gt;openLightbox(images,current));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>return el;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// populate inventory</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const grid = document.getElementById('inventory-grid');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>INVENTORY.forEach(c=&gt;grid.appendChild(createCard(c)));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// WhatsApp handling: use wa.me link. Replace PHONE_NUMBER with your number (international format, no + or 00)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const BUSINESS_WA = 'YOURNUMBERHERE'; // e.g. 972523333444 (no +)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function openWhatsAppMessage(number, text){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const encoded = encodeURIComponent(text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const url = `https://wa.me/${number}?text=${encoded}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>window.open(url, '_blank');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Card buttons</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.addEventListener('click', e=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(e.target.matches('.whatsapp')){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>e.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const id = e.target.dataset.carid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const car = INVENTORY.find(x=&gt;x.id==id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const text = `Hello! I'm interested in the ${car.title} listed on Prestige Auto. Is it still available?`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if(BUSINESS_WA==='YOURNUMBERHERE'){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>alert('Replace BUSINESS_WA in the script with your WhatsApp number (international format, no +).');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>openWhatsAppMessage(BUSINESS_WA, text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(e.target.id==='hero-wa'){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>e.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const txt = 'Hello! I found Prestige Auto online and would like to enquire.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if(BUSINESS_WA==='YOURNUMBERHERE'){alert('Replace BUSINESS_WA in the script with your WhatsApp number.');return}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>openWhatsAppMessage(BUSINESS_WA, txt);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Floating button</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById('float-wa').addEventListener('click', function(ev){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(BUSINESS_WA==='YOURNUMBERHERE'){alert('Replace BUSINESS_WA in the script with your WhatsApp number.'); ev.preventDefault(); return}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const txt = 'Hello! I have a question about Prestige Auto.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>openWhatsAppMessage(BUSINESS_WA, txt);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Lead form -&gt; WhatsApp</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById('lead-form').addEventListener('submit', function(ev){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>ev.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const fm = new FormData(this);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const first = fm.get('firstName')||'';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const last = fm.get('lastName')||'';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const phone = fm.get('phone')||'';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const interest = fm.get('interest')||'';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const mm = fm.get('makeModelYear')||'';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const message = `Hi! My name is ${first} ${last}. I am ${interest} ${mm}. My phone: ${phone}.`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(BUSINESS_WA==='YOURNUMBERHERE'){alert('Replace BUSINESS_WA in the script with your WhatsApp number.');return}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>openWhatsAppMessage(BUSINESS_WA, message);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// ========== Instructions for making it live ==========</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>console.log('Mockup loaded. To make live: 1) replace BUSINESS_WA with your number; 2) replace placeholders with real images and phone; 3) upload this file to hosting (Netlify / Vercel / GitHub Pages).');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// ===== Firebase Admin Integration (Client-side Firestore) =====</span></p>
+<p class="p1"><span class="s1">// 1. Replace the firebaseConfig object with your Firebase project's credentials.</span></p>
+<p class="p1"><span class="s1">// 2. Make sure Firestore rules allow read/write for authenticated users or configure as needed.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">// --- Firebase SDK (Modular) ---</span></p>
+<p class="p1"><span class="s1">import('https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js').then(({ initializeApp })=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js').then(({ getFirestore, collection, getDocs, addDoc, deleteDoc, doc })=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const firebaseConfig = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>apiKey: "REPLACE_ME",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>authDomain: "REPLACE_ME",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>projectId: "REPLACE_ME",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>storageBucket: "REPLACE_ME",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>messagingSenderId: "REPLACE_ME",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>appId: "REPLACE_ME"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const app = initializeApp(firebaseConfig);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const db = getFirestore(app);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const carsRef = collection(db, 'cars');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Load inventory from Firestore</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>async function loadInventory(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const snap = await getDocs(carsRef);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid.innerHTML = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>snap.forEach(docu=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const car = { id: docu.id, ...docu.data() };</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>grid.appendChild(createCard(car));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>loadInventory();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Admin quick-add (opens prompt)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.addCarAdmin = async ()=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const title = prompt('Car Title (e.g. 2019 Toyota Corolla)'); if(!title) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const price = prompt('Price (e.g. ₪45,000)'); if(!price) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const img = prompt('Image URL'); if(!img) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const make = prompt('Make');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const model = prompt('Model');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const year = prompt('Year');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>await addDoc(carsRef, { title, price, img, make, model, year });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>alert('Car added!');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>loadInventory();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Admin quick-delete</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.deleteCarAdmin = async ()=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const id = prompt('Enter car document ID to delete:');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(!id) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>await deleteDoc(doc(db, 'cars', id));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>alert('Car deleted');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>loadInventory();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p1"><span class="s1">});</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
